@@ -2,7 +2,7 @@
 
 Shorten URLs using OUO.io and earn money :moneybag:
 
-> fork of (ouo.io)[https://www.npmjs.com/package/ouo.io] written in es2015
+> fork of [ouo.io](https://www.npmjs.com/package/ouo.io) written in es2015
 
 ```js
 import { OUOio } from 'ouo'
