@@ -1,0 +1,39 @@
+{
+  "name": "ouo",
+  "version": "0.0.1",
+  "description": "Shorten URLs using OUO.io and earn money",
+  "license": "MIT",
+  "repository": "jlobos/ouo",
+  "author": "Jesús Lobos <jlobitu@gmail.com>",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run clean && babel src -d lib",
+    "clean": "rimraf lib/*",
+    "prepublish": "npm run build",
+    "test": "npm run build && ava && standard"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "lib/index.js"
+  ],
+  "keywords": [
+    "ouo.io",
+    "shorten",
+    "urls",
+    "money",
+    "link",
+    "shortener"
+  ],
+  "dependencies": {
+    "request": "^2.74.0"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0",
+    "rimraf": "^2.5.4",
+    "standard": "^7.1.2"
+  }
+}
