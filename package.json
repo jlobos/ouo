@@ -27,7 +27,7 @@
     "shortener"
   ],
   "dependencies": {
-    "request": "^2.75.0"
+    "request": "^2.76.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
