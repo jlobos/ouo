@@ -1,20 +1,14 @@
+const fetch = require('node-fetch')
 
-import request from 'request'
+module.exports = ({ key, url }) => {
+  return new Promise((resolve, reject) => {
+    fetch(`http://ouo.io/api/${key}?s=${url}`)
+    .then(res => {
+      if (res.status !== 200) {
+        return reject('Error occurred in fetch API')
+      }
 
-class OUOio {
-  constructor (key) {
-    if (!key) throw new Error('key is required')
-    this.key = key
-  }
-
-  short (link, cb) {
-    request({
-      uri: `http://ouo.io/api/${this.key}`,
-      qs: { s: link }
-    }, (error, response, body) => {
-      cb(error || (response.statusCode !== 200), body)
+      res.text().then(link => resolve(link))
     })
-  }
+  })
 }
-
-export { OUOio }

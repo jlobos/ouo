@@ -1,13 +1,9 @@
-
 import test from 'ava'
-import { OUOio } from '../lib/index'
+import short from './index'
 
-const ouo = new OUOio('kZrfrYdn')
-
-test.cb('short', t => {
-  ouo.short('https://www.google.com', (e, r) => {
-    t.falsy(e)
-    t.is(typeof r, 'string')
-    t.end()
-  })
+test('short', async t => {
+  t.is(
+    await short({ key: 'kZrfrYdn', url: 'https://www.google.com' }),
+    'http://ouo.io/K60dXX'
+  )
 })
