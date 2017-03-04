@@ -5,7 +5,7 @@ module.exports = ({ key, url }) => {
     fetch(`http://ouo.io/api/${key}?s=${url}`)
     .then(res => {
       if (res.status !== 200) {
-        return reject('Error occurred in fetch API')
+        return reject(Error('Error occurred in fetch API'))
       }
 
       res.text().then(link => resolve(link))
