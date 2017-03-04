@@ -2,24 +2,24 @@
 
 Shorten URLs using OUO.io and earn money :moneybag:
 
+## Install
+
+```bash
+$ npm install --save ouo
+```
+
+## Usage
+
 ```js
 const short = require('ouo')
 
 short({ key: 'kZrfrYdn', url: 'https://www.google.com' })
 .then(shortenedUrl => {
-  console.log(shortenedUrl) // http://ouo.io/K60dXX
+  console.log(shortenedUrl)
+  // http://ouo.io/K60dXX
 })
 ```
 
-## Installation
+## License
 
-```console
-$ npm install ouo
-```
-
-## Testing
-
-```console
-$ npm install
-$ npm test
-```
+MIT
